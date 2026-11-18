@@ -1,0 +1,307 @@
+/* ================================
+   1. VARIABLES Y RESET
+   ================================ */
+:root {
+    --color-azul: #0f6c8c;
+    --color-blanco: #ffffff;
+    --color-texto: #333333;
+    --color-fondo: #f4f4f4;
+    --fuente-titulos: 'Playfair Display', serif;
+    --fuente-texto: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos);
+    font-weight: 400;
+}
+
+/* ================================
+   2. CABECERA (HERO) - ESCRITORIO
+   ================================ */
+.seccion-heroe {
+    background-color: var(--color-azul);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    padding: 80px 20px 120px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta-sobremi {
+    background-color: var(--color-blanco);
+    max-width: 900px;
+    width: 100%;
+    min-height: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-left: 50px;
+    display: flex;
+}
+
+.contenedor-foto-perfil {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -60px;
+    width: 400px;
+    height: 110%;
+    z-index: 10;
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nombre-perfil {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--color-blanco);
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    white-space: nowrap;
+}
+
+.texto-sobremi {
+    padding: 40px;
+    margin-left: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.texto-sobremi h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.texto-sobremi p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.iconos-sociales {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.iconos-sociales a {
+    color: var(--color-texto);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.iconos-sociales a:hover {
+    color: var(--color-azul);
+}
+
+/* ================================
+   3. PROYECTOS (GRID) - ESCRITORIO
+   ================================ */
+.seccion-proyectos {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.seccion-proyectos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.cuadricula-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 30px;
+}
+
+.tarjeta-proyecto {
+    background-color: var(--color-blanco);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.imagen-proyecto {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.imagen-proyecto h3 {
+    color: var(--color-blanco);
+    font-size: 1.8rem;
+}
+
+.info-proyecto {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cabecera-proyecto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cabecera-proyecto h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.enlaces-proyecto a {
+    color: var(--color-texto);
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+.info-proyecto p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Colores de las tarjetas */
+.bg-rojo { background-color: #9e1b1b; }
+.bg-morado { background-color: #7a73d1; }
+.bg-verde { background-color: #3f8b3f; }
+.bg-rosa { background-color: #c45ba8; }
+.bg-naranja { background-color: #d68427; }
+.bg-azul { background-color: #1e8cb8; }
+
+/* ================================
+   4. FOOTER (CONTACTO) - ESCRITORIO
+   ================================ */
+.seccion-contacto {
+    background-color: var(--color-azul);
+    padding: 60px 20px;
+}
+
+.contenido-contacto {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    color: var(--color-blanco);
+}
+
+.texto-contacto {
+    flex: 1;
+}
+
+.texto-contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.texto-contacto p, .texto-contacto address {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-style: normal;
+}
+
+.texto-contacto .iconos-sociales {
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.texto-contacto .iconos-sociales a {
+    color: var(--color-blanco);
+}
+
+.texto-contacto .iconos-sociales a:hover {
+    color: #ccc;
+}
+
+.imagen-contacto {
+    flex: 1;
+    max-width: 400px;
+}
+
+.imagen-contacto img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ================================
+   5. DISEÑO ADAPTABLE (MÓVIL Y TABLET)
+   ================================ */
+
+/* Para pantallas de tablet (menos de 900px) */
+@media (max-width: 900px) {
+    .cuadricula-proyectos {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
+
+/* Para pantallas de móvil (menos de 600px) */
+@media (max-width: 600px) {
+    
+    /* Cabecera */
+    .tarjeta-sobremi {
+        display: flex;
+        flex-direction: column; 
+        margin: 0 20px; 
+    }
+
+    .contenedor-foto-perfil {
+        position: relative; 
+        width: 100%;
+        height: 350px;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-top: -30px; 
+        margin-left: 0;
+    }
+
+    .texto-sobremi {
+        margin-left: 0; 
+        padding: 20px;
+    }
+
+    /* Proyectos */
+    .cuadricula-proyectos {
+        grid-template-columns: 1fr; /* 1 sola columna */
+    }
+
+    /* Footer */
+    .contenido-contacto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto-contacto .iconos-sociales {
+        justify-content: center; /* Iconos centrados en móvil */
+    }
+
+    .imagen-contacto {
+        margin-top: 30px;
+    }
+}
