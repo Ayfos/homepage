@@ -2,6 +2,8 @@
 
 Este es un proyecto de práctica de la sección de HTML y CSS Avanzado de **The Odin Project**.
 
+🔗 **[¡Mira la página en vivo aquí!](https://ayfos.github.io/homepage/)**
+
 ## 🎯 Objetivo del proyecto
 Crear una página de inicio (landing page) totalmente responsive a partir de un diseño proporcionado en tres formatos: escritorio, tableta y móvil.
 
